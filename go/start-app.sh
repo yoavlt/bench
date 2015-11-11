@@ -1,2 +1,2 @@
 #!/bin/sh
-go run main.go
+GOMAXPROCS=4 go run main.go
