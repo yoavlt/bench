@@ -8,4 +8,10 @@ router.get('/html', function(req, res, next) {
   res.render('index', {names: names});
 });
 
+router.get('/json', function(req, res, next) {
+  res.contentType('application/json');
+  json = JSON.stringify({names: names});
+  res.send(json);
+});
+
 module.exports = router;
