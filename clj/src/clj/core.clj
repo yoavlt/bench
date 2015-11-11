@@ -20,7 +20,7 @@
   (GET "/render/html" []
      (render-file "templates/index.html" {:names members}))
   (GET "/render/json" []
-     (render-json {:names members}))
+     (render-json {:data members}))
   (POST "/post/json" {body :body}
      (when-let [json (read-json-body body)]
        (render-json {:names members}))))

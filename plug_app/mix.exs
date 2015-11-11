@@ -15,7 +15,7 @@ defmodule PlugApp.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger, :cowboy, :plug]]
+    [applications: [:logger, :cowboy, :plug, :poison]]
   end
 
   # Dependencies can be Hex packages:
@@ -30,7 +30,8 @@ defmodule PlugApp.Mixfile do
   defp deps do
     [
       {:cowboy, "~> 1.0"},
-      {:plug, "~> 1.0"}
+      {:plug, "~> 1.0"},
+      {:poison, "~> 1.5"}
     ]
   end
 
